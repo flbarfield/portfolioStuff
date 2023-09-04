@@ -1,0 +1,67 @@
+
+/* Font Sizes */
+* {
+    font-size: 62.5%;
+    
+}
+
+h1 {
+    font-size: 4.0rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+a {
+    font-size: 2rem;
+}
+
+p, button {
+    font-size: 1.6rem;
+} 
+
+/* GENERAL */
+nav, nav > *, .aboutFinder, .recipeInfo {
+    display: flex;
+}
+
+nav > *, .aboutFinder > *, .recipeInfo >* {
+    flex-basis: 100%;
+}
+
+/* NAVIGATION */
+nav {
+    align-items: center;
+    background-color: rgb(1, 37, 44);
+}
+
+nav h2 {
+    color: rgb(255, 255, 255);
+}
+
+nav > * {
+    flex-direction: column;
+    align-items: center;
+}
+
+nav img {
+    max-width: 683px;
+}
+
+nav li a, nav li {
+    list-style: none;
+    text-decoration: none;
+}
+
+nav ul {
+    gap: 1rem;
+}
+
+nav li {
+    background-color: lightblue;
+    min-width: 20rem;
+    height: 3rem;
+    text-align: center;
+    padding-top: 0.7rem;
+}
