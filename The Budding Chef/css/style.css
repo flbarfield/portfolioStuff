@@ -1,0 +1,116 @@
+
+/* Font Sizes */
+* {
+    font-size: 62.5%;
+    background-color: rgb(150, 255, 171);
+}
+
+h1 {
+    font-size: 4.0rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+a {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+}
+
+p, button, label {
+    font-size: 1.6rem;
+} 
+
+/* GENERAL */
+nav, nav > *, .aboutFinder, .aboutFinder > *, .recipeInfo, .buttonsAndForms {
+    display: flex;
+}
+
+nav > *, .aboutFinder > *, .recipeInfo >*, .buttonsAndForms {
+    flex-basis: 100%;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: rgb(1, 37, 44);
+}
+
+nav h2 {
+    color: rgb(255, 255, 255);
+    background-color: rgb(1, 37, 44);
+}
+
+nav > * {
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(1, 37, 44);
+}
+
+nav img {
+    max-width: 683px;
+}
+
+nav li a, nav li {
+    list-style: none;
+    text-decoration: none;
+}
+
+nav ul {
+    gap: 1rem;
+}
+
+nav li {
+    background-color: rgb(42, 93, 76);
+    min-width: 20rem;
+    height: 3rem;
+    text-align: center;
+    padding-top: 0.7rem;
+}
+
+.selectedNav {
+    background-color: rgb(119, 199, 135);
+    color: white;
+}
+
+/* APP DESCRIPTION SECTION */
+.aboutFinder {
+    flex: 1 1 100%;
+    background-color: rgb(150, 255, 171);
+    gap: 5rem;
+}
+
+.aboutLeft {
+    flex-direction: column;
+    align-items:center;
+    margin-left: 2rem;
+}
+
+.aboutLeft img {
+    max-width: 500px;
+    min-width: 200px;
+}
+
+.aboutRight {
+    align-items: center;
+}
+
+.appDescription {
+    font-size: 2.4rem;
+    flex-basis: 90%;
+}
+
+.recipeInfo {
+    background-color: rgb(150, 255, 171);
+}
+/* BOTTOM SECTION, SEARCH FEATURES */
+
+.buttonsAndForms{
+    /* gap: 2rem; */
+    font-size: 2.5rem;
+    margin-top: 2rem;
+}
+
+button, input {
+    background-color: white;
+}
