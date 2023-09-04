@@ -23,19 +23,21 @@
             <img src="imagesToUse\chef-demo-cooking-saucing-dish.jpg" alt="">
         </section>
         <section class="aboutRight">
-            <p class="appDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil reprehenderit qui, voluptate rem sit totam accusantium ut laboriosam minima quibusdam? Earum autem tempore odio qui consectetur, reprehenderit temporibus quibusdam molestias. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque cum dignissimos molestias non recusandae molestiae fugiat nulla atque provident odio. Tenetur magnam quas sint consectetur fuga amet assumenda doloremque repellat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro necessitatibus facilis eaque dolorem. Inventore consectetur dolorum veritatis ab unde aut ratione ut sunt, placeat maiores ipsam reprehenderit tempora, culpa tenetur.</p>
+            <p class="appDescription">If you've ever looked within your fridge and groaned at the idea of eating the same exact thing for, "ONE...MORE...DAY", try this tool instead! With it, you can enter any main ingredient and with the a quick search of our databases, you'll get a slew of meal options to choose from! </br></br> If you're new to the site, give it a try! Go ahead and type "chicken" for a quick example!
         </section>
     </section>
     <section class='buttonsAndForms'>
-        <form action="">
-            <label for="foodInput">Ingredient:</label>
-            <input type="text" name="foodInput" id="foodInput" placeholder="Input an ingredient">
-            <button>More Recipes</button>
-        </form>
+            <label for="ingredientInput">Main Ingredient:</label>
+            <input type="text" name="" id="ingredientInput" placeholder="Input an ingredient">
+            <button id="ingredientButton">Search Ingredient</button>
+            <label for="recipeSearch">Search Recipe:</label>
+            <input type="text" name="" id="recipeSearch" placeholder="Input a found recipe">
+            <button id="recipeButton">Search Recipe</button>
     </section>
-
-    <!-- <section class="recipeInfo">
-        <section>
+    <section class="recipeInfo">
+        <!-- Need to display number of items found, the a scrollable/clickable list of the items, and when you click on it, it will display the ingredients, instructions, and a photo -->
+        <section class="hidden">
+            <h3 id="resultNum">0 Items Found!</h3>
             <img src="" alt="">
             <h2></h2>
             <p></p>
@@ -50,8 +52,8 @@
             <h2></h2>
             <p></p>
         </section>
-    </section> -->
+    </section>
     
-    <script src="js\main.js"></script>
+    <script type='text/javascript' src="js\main.js"></script>
 </body>
 </html>

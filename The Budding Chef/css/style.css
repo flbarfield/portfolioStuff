@@ -13,6 +13,10 @@ h2 {
     font-size: 3rem;
 }
 
+h3 {
+    font-size: 2.6rem;
+}
+
 a {
     font-size: 2rem;
     color: rgb(255, 255, 255);
@@ -23,11 +27,11 @@ p, button, label {
 } 
 
 /* GENERAL */
-nav, nav > *, .aboutFinder, .aboutFinder > *, .recipeInfo, .buttonsAndForms {
+nav, nav > *, .aboutFinder, .aboutFinder > *, .recipeInfo, .aboutRight, .buttonsAndForms {
     display: flex;
 }
 
-nav > *, .aboutFinder > *, .recipeInfo >*, .buttonsAndForms {
+nav > *, .aboutFinder > *, .recipeInfo >*, .buttonsAndForms, .aboutRight {
     flex-basis: 100%;
 }
 
@@ -106,11 +110,23 @@ nav li {
 /* BOTTOM SECTION, SEARCH FEATURES */
 
 .buttonsAndForms{
-    /* gap: 2rem; */
     font-size: 2.5rem;
     margin-top: 2rem;
+    justify-content: center;
+    /* margin-left: 2.5rem; */
+}
+
+label {
+    font-size: 2.5rem;
 }
 
 button, input {
     background-color: white;
 }
+
+input {
+    margin-right: 2rem;
+}
+
+/* Hidden Ingredient Section */
+
