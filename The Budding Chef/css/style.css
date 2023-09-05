@@ -27,7 +27,7 @@ p, button, label {
 } 
 
 /* GENERAL */
-nav, nav > *, .aboutFinder, .aboutFinder > *, .recipeInfo, .aboutRight, .buttonsAndForms {
+nav, nav > *, .aboutFinder, .aboutFinder > *, .recipeInfo, .aboutRight, .buttonsAndForms, .recipeInfoMid {
     display: flex;
 }
 
@@ -78,21 +78,34 @@ nav li {
 }
 
 /* APP DESCRIPTION SECTION */
+.aboutRight, .aboutLeft, .aboutRight > *, .aboutLeft > * {
+    background-color: rgb(42, 93, 76);
+    color: white;
+}
+
 .aboutFinder {
-    flex: 1 1 100%;
+    /* flex: 1 1 100%; */
     background-color: rgb(150, 255, 171);
-    gap: 5rem;
+    margin-top: 3rem;
+    justify-content: space-around;
+}
+
+.aboutLeft, .aboutRight {
+    flex-basis: 45%;
+    justify-content: space-around;
+    border-radius: 2%;
 }
 
 .aboutLeft {
     flex-direction: column;
     align-items:center;
-    margin-left: 2rem;
 }
 
 .aboutLeft img {
     max-width: 500px;
     min-width: 200px;
+    /* flex-basis: 50%; */
+    border-radius: 1%;
 }
 
 .aboutRight {
@@ -101,12 +114,10 @@ nav li {
 
 .appDescription {
     font-size: 2.4rem;
-    flex-basis: 90%;
+    flex-basis: 85%;
 }
 
-.recipeInfo {
-    background-color: rgb(150, 255, 171);
-}
+
 /* BOTTOM SECTION, SEARCH FEATURES */
 
 .buttonsAndForms{
@@ -128,5 +139,40 @@ input {
     margin-right: 2rem;
 }
 
-/* Hidden Ingredient Section */
+/* Toggle Hidden Ingredient Section */
 
+
+.recipeInfo {
+    margin-top: 5em;
+}
+
+.recipeInfoLeft, .recipeInfoLeft > *, .recipeInfoMid, .recipeInfoRight, .recipeInfoRight > *, .recipeInfoMid > * {
+    background-color: rgb(42, 93, 76);
+    color: white;
+}
+
+
+.scrollList {
+    overflow: scroll;
+    height: 50rem;
+    padding: 2rem;
+    scrollbar-base-color: rgb(150, 255, 171);
+    scrollbar-color: rgb(150, 255, 171) ;
+    scrollbar-face-color: rgb(150, 255, 171);
+}
+
+.recipeInfoMid {
+    justify-content: center;
+    align-items: center;
+}
+
+.recipeInfoMid img{
+    max-width: 275px;
+    max-height: 185px;
+    justify-content: center;
+    border-radius: 2%;
+}
+
+.recipeInfoRight {
+    padding: 2rem;
+}
