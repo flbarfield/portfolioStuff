@@ -51,35 +51,32 @@ function cookDirections () {
     fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata')
     .then(res => res.json())
     .then(data => {
-        console.log(data)
+        // console.log(data)
         recipeIngredientChildCheck()
         let youtubeLink = data.meals[0].strYoutube
         youtubeLink = youtubeLink.replace("watch?v=", "embed/")
-        console.log(youtubeLink)
+        // console.log(youtubeLink)
 
         document.getElementById('midPic').src = data.meals[0].strMealThumb
-        document.getElementById('midVid').src = data.meals[0].strYoutube
+        document.getElementById('midLink').href = data.meals[0].strYoutube
         if (data.meals[0] === null) {
-            document.getElementById('recipeTitle').innerText = 'Recipe Not Found! Try again.'
+            document.h3.innerText = 'Recipe Not Found! Try again.'
         } else {
             h3.innerText = data.meals[0].strMeal
             p.innerText = data.meals[0].strInstructions
+            console.log(data.meals[0].strIngredient1)
             for (let i = 0; i < 21; i++) {
                 if (data.meals.strInstructions[i] === null || data.meals.strInstructions[i] === '') {
                     continue
-                } else {
+                } else{
                     let li = document.createElement('li')
-                    let ingredient = data.meals[0].strIngredient[i]
+                    // this is coming back with undefined. Need to figure out a way to append 1-20 to 'strIngredient' without type conflict...
+                    let ingredient = data.meals[0].strIngredient[String(i)]
                     li.textContent = ingredient
-                    document.getElementById('recipeIngredients').appendChild(li)
+                    document.ul.appendChild(li)
                 }
+        
             }
-                // let li2 = document.createElement('li')
-                // let mealName = data.meals[i].strMeal
-                // li.textContent += mealName
-                // document.getElementById('recipeIngredients').appendChild(li)
-                // }
-                
         }
     })
     .catch(err => {
