@@ -156,14 +156,18 @@ input {
     overflow: scroll;
     height: 50rem;
     padding: 2rem;
-    scrollbar-base-color: rgb(150, 255, 171);
-    scrollbar-color: rgb(150, 255, 171) ;
-    scrollbar-face-color: rgb(150, 255, 171);
 }
+
+.scrollList li, #recipeIngredients > *, #recipeDirectioons {
+    background-color: rgb(42, 93, 76);
+    font-size: 2rem;
+}
+
 
 .recipeInfoMid {
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .recipeInfoMid img{
