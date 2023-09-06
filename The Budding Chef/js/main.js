@@ -65,19 +65,21 @@ function cookDirections () {
             h3.innerText = data.meals[0].strMeal
             p.innerText = data.meals[0].strInstructions
             for (let i = 0; i < 21; i++) {
-                if (data.meals[i] === null || data.meals[i] === '') {
-                    continue;
-                } else if {
-                    let blah = document.createElement('li')
+                if (data.meals.strInstructions[i] === null || data.meals.strInstructions[i] === '') {
+                    continue
+                } else {
+                    let li = document.createElement('li')
+                    let ingredient = data.meals[0].strIngredient[i]
+                    li.textContent = ingredient
+                    document.getElementById('recipeIngredients').appendChild(li)
                 }
+            }
                 // let li2 = document.createElement('li')
                 // let mealName = data.meals[i].strMeal
                 // li.textContent += mealName
                 // document.getElementById('recipeIngredients').appendChild(li)
                 // }
                 
-            }
-
         }
     })
     .catch(err => {
