@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Budding Chef</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css\style.css">
+</head>
+<body>
+    <nav>
+        <img src="imagesToUse/cover.png" alt="">
+        <ul>
+            <h2>By Melanie Rosebud</h2>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Me</a></li>
+            <li class="selectedNav"><a href="#" >Recipe Finder</a></li>
+        </ul>
+    </nav>
+    <section class="aboutFinder">
+        <section class="aboutLeft">
+            <h1>The Recipe Finder</h1>
+            <img src="imagesToUse\chef-demo-cooking-saucing-dish.jpg" alt="">
+        </section>
+        <section class="aboutRight">
+            <p class="appDescription">If you've ever looked within your fridge and groaned at the idea of eating the same exact thing for the fifthteenth time in a row, try this tool instead! With it, you can enter any main ingredient and with the a quick search of our databases, you'll get a slew of meal options to choose from! </br></br> If you're new to the site, give it a try! Go ahead and type "chicken" for a quick example!
+        </section>
+    </section>
+    <section class='buttonsAndForms'>
+            <label for="ingredientInput">Main Ingredient:</label>
+            <input type="text" name="" id="ingredientInput" placeholder="Input an ingredient">
+            <button id="ingredientButton">Search Ingredient</button>
+            <label for="recipeSearch">Search Recipe:</label>
+            <input type="text" name="" id="recipeSearch" placeholder="Input a found recipe">
+            <button id="recipeButton">Search Recipe</button>
+    </section>
+    <section class="recipeInfo hidden">
+        <!-- Need to display number of items found, the a scrollable/clickable list of the items, and when you click on it, it will display the ingredients, instructions, and a photo -->
+        <section class="recipeInfoLeft scrollList">
+            <h3 id="resultNum">0 Items Found!</h3>
+            <ul id="recipeList">
+                <!--appending li elements via JS -->
+            </ul>
+        </section>
+        <section class="recipeInfoMid">
+            <img id='midPic' src="imagesToUse\chef-demo-cooking-saucing-dish.jpg" alt="">
+            <iframe id="midVid" src="" frameborder="0"></iframe>
+        </section>
+        <section class="recipeInfoRight">
+            <h3 id="recipeTitle">Lorem ipsum dolor sit</h3>
+            <ul id='recipeIngredients'>
+                <li>placeholder</li>
+                <li>placeholder</li>
+                <li>placeholder</li>
+            </ul>
+            <p id="recipeDirections"></p>
+        </section>
+    </section>
+    
+    <script type='text/javascript' src="js\main.js"></script>
+</body>
+</html>
