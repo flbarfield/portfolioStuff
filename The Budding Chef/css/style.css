@@ -1,4 +1,3 @@
-
 /* Font Sizes */
 * {
     font-size: 62.5%;
@@ -17,12 +16,12 @@ h3 {
     font-size: 2.6rem;
 }
 
-a {
+a, .aboutLeft button, .aboutRight input, .aboutLeft input, .aboutRight input, .aboutRight button {
     font-size: 2rem;
     color: rgb(255, 255, 255);
 }
 
-p, button, label {
+p {
     font-size: 1.6rem;
 } 
 
@@ -84,7 +83,6 @@ nav li {
 }
 
 .aboutFinder {
-    /* flex: 1 1 100%; */
     background-color: rgb(150, 255, 171);
     margin-top: 3rem;
     justify-content: space-around;
@@ -104,12 +102,14 @@ nav li {
 .aboutLeft img {
     max-width: 500px;
     min-width: 200px;
-    /* flex-basis: 50%; */
+    margin-bottom: 20px;
     border-radius: 1%;
 }
 
 .aboutRight {
+    flex-direction: column;
     align-items: center;
+    padding: 3rem;
 }
 
 .appDescription {
@@ -124,26 +124,34 @@ nav li {
     font-size: 2.5rem;
     margin-top: 2rem;
     justify-content: center;
-    /* margin-left: 2.5rem; */
 }
 
 label {
     font-size: 2.5rem;
 }
 
-button, input {
-    background-color: white;
+#recipebutton, #ingredientButton, input {
+    background-color: rgb(150, 255, 171);
 }
 
-input {
-    margin-right: 2rem;
+#ingredientButton {
+    margin-bottom: 10px;
 }
+
+#hiddenIngredientButton, #hiddenIngredientInput {
+    display: none;
+}
+
+
 
 /* Toggle Hidden Ingredient Section */
 
+.recipeInfoLeft, .recipeInfoRight, .recipeInfoMid {
+    border: thin solid white;
+}
 
 .recipeInfo {
-    margin-top: 5em;
+    margin-top: 4.5rem;
 }
 
 .recipeInfoLeft, .recipeInfoLeft > *, .recipeInfoMid, .recipeInfoRight, .recipeInfoRight > *, .recipeInfoMid > * {
@@ -153,21 +161,21 @@ input {
 
 
 .scrollList {
-    overflow: scroll;
-    height: 50rem;
     padding: 2rem;
 }
 
-.scrollList li, #recipeIngredients > *, #recipeDirectioons {
+.scrollList li, #recipeIngredients, #recipeDirections {
     background-color: rgb(42, 93, 76);
     font-size: 2rem;
 }
 
 
 .recipeInfoMid {
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     flex-direction: column;
+    gap: 2rem;
+    padding-top: 4.5rem;
 }
 
 .recipeInfoMid img{
@@ -179,4 +187,42 @@ input {
 
 .recipeInfoRight {
     padding: 2rem;
+}
+
+/* SPECIAL HIDDEN FEATURE */
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 1005px) {
+
+    /* NAVIGATION */
+    nav {
+        flex-direction: column;
+        flex-basis: 100%;
+    }
+
+    nav img {
+        justify-items:center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    nav ul{
+        padding: 0 0 50px 0;
+        margin: 0 auto;
+    }
+    /* AboutFinder */
+    
+    #aboutLeftToHide {
+        display: none;
+    }
+
+    #hiddenIngredientButton, #hiddenIngredientInput {
+        display: block;
+    }
+
+    
+
+
 }
