@@ -6,6 +6,9 @@
     <title>The Budding Chef</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css\style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Source+Sans+3&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -21,15 +24,21 @@
         <section id=aboutLeftToHide class="aboutLeft">
             <h1>The Recipe Finder</h1>
             <img src="imagesToUse\chef-demo-cooking-saucing-dish.jpg" alt="">
-            <input type="text" name="" id="ingredientInput" placeholder="Input an ingredient">
-            <button id="ingredientButton">Search Ingredient</button>
+            <section class="botLeftButtons">
+                <input type="text" name="" id="ingredientInput" placeholder="Input an ingredient">
+                <button class="ingredientButton">Search Ingredient</button>
+            </section>
         </section>
         <section class="aboutRight">
-            <p class="appDescription">If you've ever looked within your fridge and groaned at the idea of eating the same exact thing for the fifthteenth time in a row, try this tool instead! With it, you can enter any main ingredient and with the a quick search of our 143 dish databases, you'll get a slew of meal options to choose from! </br></br> If you're new to the site, give it a try! Go ahead and type "chicken" for a quick example in the left hand box! Or just leave it blank to see all available recipes! Once you have the name of the recipe, input that into the right box, and you'll have your directions!</p>
+            <p class="appDescription">If you've ever looked in your fridge and groaned at the idea of eating the same exact thing for the fifteenth time in a row, try this tool instead! With it, you can enter any main ingredient, and with a quick search of our 143 dish databases, you'll get a slew of meal options to choose from!
+            <br><br>
+            If you're new to the site, give it a try! Go ahead and type "chicken" for a quick example in the left-hand box. Or just leave it blank to see all the available recipes! Once you have the name of a recipe, input that into the recipe box, and you'll have your directions!</p>
             <input type="text" name="" id="hiddenIngredientInput" placeholder="Input an ingredient">
-            <button id="hiddenIngredientButton">Search Ingredient</button>
-            <input type="text" name="" id="recipeSearch" placeholder="Input a found recipe">
-            <button id="recipeButton">Search Recipe</button>
+            <button class="ingredientButton" id="hiddenIngredientButton">Search Ingredient</button>
+            <section class="botRightButtons">
+                <input type="text" name="" id="recipeSearch" placeholder="Input a found recipe">
+                <button id="recipeButton">Search Recipe</button>
+            </section>
         </section>
     </section>
     <section id="hideSection" class="recipeInfo hidden">
@@ -39,18 +48,15 @@
                 <!--appending li elements via JS -->
             </ul>
         </section>
-        <section class="recipeInfoMid">
-            <img id='midPic' src="imagesToUse\chef-demo-cooking-saucing-dish.jpg" alt="">
-            <a id='midLink' href="">Preparation Youtube Video</a>
-        </section>
+
         <section class="recipeInfoRight">
-            <h3 id="recipeTitle">Lorem ipsum dolor sit</h3>
-            <span id='recipeIngredients'>
-            </span>
-            <p id="recipeDirections"></p>
+            <h3 id="recipeTitle"></h3>
+            <img id='midPic' src="" alt="">
+            <span id='recipeIngredients'></span>
+            <p id="recipeDirections"></p>    
+            <a id='midLink' href=""></a>
         </section>
     </section>
-    
     <script type='text/javascript' src="js\main.js"></script>
 </body>
 </html>

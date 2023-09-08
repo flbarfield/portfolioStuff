@@ -2,6 +2,8 @@
 * {
     font-size: 62.5%;
     background-color: rgb(150, 255, 171);
+    font-family: 'Aladin', cursive;
+    font-family: 'Source Sans 3', sans-serif;
 }
 
 h1 {
@@ -26,7 +28,7 @@ p {
 } 
 
 /* GENERAL */
-nav, nav > *, .aboutFinder, .aboutFinder > *, .recipeInfo, .aboutRight, .buttonsAndForms, .recipeInfoMid {
+nav, nav > *, .aboutFinder, .aboutFinder > *, .recipeInfo, .aboutRight, .recipeInfoRight {
     display: flex;
 }
 
@@ -76,6 +78,10 @@ nav li {
     color: white;
 }
 
+nav h2, nav li {
+    border-radius: 2%;
+}
+
 /* APP DESCRIPTION SECTION */
 .aboutRight, .aboutLeft, .aboutRight > *, .aboutLeft > * {
     background-color: rgb(42, 93, 76);
@@ -92,6 +98,7 @@ nav li {
     flex-basis: 45%;
     justify-content: space-around;
     border-radius: 2%;
+    border: 2px solid white;
 }
 
 .aboutLeft {
@@ -104,17 +111,28 @@ nav li {
     min-width: 200px;
     margin-bottom: 20px;
     border-radius: 1%;
+    border: thin solid white;
+}
+
+.recipeInfoRight {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
 }
 
 .aboutRight {
     flex-direction: column;
     align-items: center;
-    padding: 3rem;
 }
 
 .appDescription {
     font-size: 2.4rem;
     flex-basis: 85%;
+    padding: 0 3rem;
+}
+
+.recipeInfo {
+    align-items: stretch;
 }
 
 
@@ -130,18 +148,29 @@ label {
     font-size: 2.5rem;
 }
 
-#recipebutton, #ingredientButton, input {
-    background-color: rgb(150, 255, 171);
+#recipeButton, .ingredientButton, #hiddenIngredientButton  {
+    background-color: rgb(119, 199, 135);
 }
 
 #ingredientButton {
     margin-bottom: 10px;
 }
 
+.aboutFinder input {
+    background: rgb(242, 242, 242);
+    text-align: center;
+    color: black;
+}
+
 #hiddenIngredientButton, #hiddenIngredientInput {
     display: none;
 }
 
+.botRightButtons, .botLeftButtons {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+}
 
 
 /* Toggle Hidden Ingredient Section */
@@ -160,34 +189,27 @@ label {
 }
 
 
-.scrollList {
-    padding: 2rem;
-}
-
 .scrollList li, #recipeIngredients, #recipeDirections {
     background-color: rgb(42, 93, 76);
     font-size: 2rem;
 }
 
 
-.recipeInfoMid {
-    justify-content: start;
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
-    padding-top: 4.5rem;
-}
-
-.recipeInfoMid img{
-    max-width: 275px;
-    max-height: 185px;
-    justify-content: center;
-    border-radius: 2%;
-}
-
-.recipeInfoRight {
+.recipeInfoRight, #recipeList {
     padding: 2rem;
+    overflow: scroll;
+    height: 50rem;
 }
+
+.recipeInfoRight img{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 2%;
+    border: thin solid white;
+}
+
+
 
 /* SPECIAL HIDDEN FEATURE */
 .hidden {
@@ -222,7 +244,17 @@ label {
         display: block;
     }
 
-    
+   #recipeSearch {
+        margin-top: 2rem;
+   }
 
+   .aboutRight {
+        align-items: center;
+        flex-basis: 90%;
+   }
+
+   button {
+    margin-top: 1rem;
+   }
 
 }

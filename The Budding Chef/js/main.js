@@ -1,8 +1,16 @@
-document.getElementById('ingredientButton').addEventListener('click', getFood)
-document.getElementById('hiddenIngredientButton').addEventListener('click', getFood)
+//TO DOs: 1) rename html and JS names to make more sense in regards to positioning. 2) Make the food list on the left side of the page clickable, so that it automatically brings up the recipe. 3) Fix scrollbox bug, thanks flexbox. 4) fix collpsing flexbox line when recipeingredients haven't been loaded yet, but the recipe list has.
+
+ingedientButtonListener()
 document.getElementById('recipeButton').addEventListener('click', cookDirections)
 
-function scrollChildCheck () {
+function ingedientButtonListener () {
+    const ingButtonListener = document.querySelectorAll('.ingredientButton')
+    ingButtonListener.forEach(button => {
+    button.addEventListener('click', getFood)
+    })
+}
+
+function scrollChildCheck (){                    
     let targetList = document.getElementById('recipeList')
     while (targetList.firstChild) {
         targetList.removeChild(targetList.lastChild)
@@ -21,6 +29,9 @@ function getFood () {
     document.getElementById('hideSection').classList.remove('hidden')
     document.getElementById('hideSection').scrollIntoView()
     let foodSearch = document.getElementById('ingredientInput').value
+    if (foodSearch === '') {
+        foodSearch = document.getElementById('hiddenIngredientInput').value
+    }
     fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${foodSearch}`)
     .then(res => res.json())
     .then(data => {
@@ -52,6 +63,7 @@ function cookDirections () {
         recipeIngredientChildCheck()
         document.getElementById('midPic').src = data.meals[0].strMealThumb
         document.getElementById('midLink').href = data.meals[0].strYoutube
+        document.getElementById('midLink').innerText = 'Prep Video'
         if (data.meals[0] === null) {
             document.h3.innerText = 'Recipe Not Found! Try again.'
         } else {
