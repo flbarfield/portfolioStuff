@@ -2272,6 +2272,17 @@ input, select, textarea {
 				background-color: #e8edec;
 			}
 
+			#about div{
+				display: flex;
+				flex-direction: row;
+				gap: 3em;
+				align-items: center;
+			}
+
+			#about img {
+				margin-top: 2em;
+			}
+
 /* Wide */
 
 	@media screen and (min-width: 961px) and (max-width: 1880px) {
@@ -2623,6 +2634,15 @@ input, select, textarea {
 
 				#main section.cover header {
 					padding: 0 1em;
+				}
+
+				#about div {
+					flex-direction: column;
+					display: block;
+				}
+
+				#about section {
+					padding-top: 0;
 				}
 
 		/* Footer */

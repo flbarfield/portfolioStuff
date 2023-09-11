@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: Titillium-Regular
+font link: https://www.fontsquirrel.com/fonts/titillium
+font author: Accademia di Belle Arti Urbino
+font author site: http://www.accademiadiurbino.it/
+
+
+icon designer: m. turan ercan
+icon designer link: /mte
+        
+{"bg-gradient-0":"#67635D","bg-gradient-1":"#FFD6AD","icon":"#ffffff","font":"#ffffff","slogan":"#ffffff"}
+      
