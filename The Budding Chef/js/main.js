@@ -87,8 +87,9 @@ function cookDirections () {
     // displays lower half of the page, scrolls user into to it
     document.getElementById('hideSection').classList.remove('hidden')
     document.getElementById('hideSection').scrollIntoView()
-
+    const recipeTitle = document.getElementById('recipeTitle')
     let recipeSearch = document.getElementById('recipeSearch').value
+
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${recipeSearch}`)
     .then(res => res.json())
     .then(data => {
@@ -96,15 +97,15 @@ function cookDirections () {
         document.getElementById('foodPic').src = data.meals[0].strMealThumb
         document.getElementById('videoLink').href = data.meals[0].strYoutube
         document.getElementById('videoLink').innerText = 'Prep Video'
-        if (data.meals[0] === null) {
-            document.h3.innerText = 'Recipe Not Found! Try again.'
+        if (data.meals == null) {
+            recipeTitle.innerText = 'Recipe Not Found! Try again.'
         } else {
-            let h3 = document.getElementById('recipeTitle')
+            
             let ingredientString = ''
             let ingredientListDOM = document.getElementById('recipeIngredients')
             let p = document.getElementById('recipeDirections')
             let recMeal = data.meals[0] 
-            h3.innerText = data.meals[0].strMeal
+            recipeTitle.innerText = data.meals[0].strMeal
             
             ingredientString = 
             recMeal.strMeasure1 + ' ' + recMeal.strIngredient1 + '. ' + 
@@ -153,6 +154,7 @@ function cookDirections () {
     })
     .catch(err => {
         console.log(`error ${err}`)
+        recipeTitle.innerText = 'Recipe Not Found! Try again.'
     })
 }
 
