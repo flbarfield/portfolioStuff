@@ -175,7 +175,7 @@ label {
 
 /* Toggle Hidden Ingredient Section */
 
-.recipeInfoLeft, .recipeInfoRight, .recipeInfoMid {
+.recipeInfoLeft, .recipeInfoRight {
     border: thin solid white;
 }
 
@@ -195,18 +195,17 @@ label {
 }
 
 
-.recipeInfoRight, #recipeList {
-    padding: 2rem;
+.recipeInfoRight, .recipeInfoLeft {
+    padding: 5rem;
     overflow: scroll;
     height: 50rem;
 }
 
 .recipeInfoRight img{
-    width: 80%;
-    height: auto;
+    max-width: 80%;
     margin: 0 auto;
     border-radius: 2%;
-    border: thin solid white;
+    /* border: thin solid white; */
 }
 
 
