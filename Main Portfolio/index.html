@@ -61,13 +61,14 @@
 					<section id="top" class="one dark cover">
 						<div class="container">
 
-							<header>
+							<header class="headerText">
 								<h2 class="alt">Hello! I'm Ricky Barfield</h2>
 								<p>And I'm your next Software Engineer</p>
-							</header>
+								
 
 							<footer>
 								<a href="#portfolio" class="button scrolly">Projects</a>
+							</header>
 							</footer>
 
 						</div>
@@ -81,54 +82,38 @@
 								<h2>Portfolio</h2>
 							</header>
 
-							<p>~~~More projects will be uploaded soon. Stay tuned!~~~</p>
-
-							<div class="row">
+							<div class="portfolioItems row">
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="https://thebuddingchef.netlify.app/" class="image fit"><img src="images\Screen Shot, budding Chef.png" alt="" /></a>
+										<a target="_blank" href="https://cirque-fitness-9235de5183f0.herokuapp.com/" class="image fit"><img src="images/CirqueFitness.gif" alt="CirqueFitness" /></a>
+										<header>
+											<h3>'CirqueFitness</h3>
+											<h4><b>Guest Credentials:</b></h4>
+											<span>Email: guest@guest.com <br>username: guest <br>password: password12345</span>
+											<p>
+												A circus artist's fitness Fullstack Web Application built with the use of <b>Node</b>, <b>MongoDB</b>, <b>Javascript</b>, <b>EJS</b>, and employing the usage of the <b>MVC Model</b> and <b>CRUD</b> principals. While still under development, this app application currently features user authentication and session saving, the inputting and editing of a user's custom exercises, the ability to track sets and reps, and a built-in timer for holding isometric exercises.
+											</p>
+										</header>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<a target="_blank" href="https://thebuddingchef.netlify.app/" class="image fit"><img src="images/buddingChef.gif" alt="" /></a>
 										<header>
 											<h3>"The Budding Chef" - Recipe Finder</h3>
 											<p>Utilizes the fetching and manipulation of data acquired from two publicly sourced separate <b>APIs</b>, requiring thorough use of <b>Javascript</b>, <b>HTML</b>, and <b>CSS</b>.</p>
 										</header>
 									</article>
-									<!-- <article class="item">
-										<a href="https://auroraluxuryrentals.netlify.app/" class="image fit"><img src="images/Aurora Luxury Rentals.png" alt="" /></a>
-										<header>
-											<h3>"Aurora Luxury Rentals"</h3>
-											<p>Built for a client's Airbnb and luxury home rental business in the making, this landing page will serve as a foundation for their web presence once they get up and running. Created through the use of <b>Javascript</b>, <b>HTML</b>, and <b>CSS</b>.</p>
-										</header>
-									</article> -->
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="https://auroraluxuryrentals.netlify.app/" class="image fit"><img src="images/Aurora Luxury Rentals.png" alt="" /></a>
+										<a target="_blank" href="https://auroraluxuryrentals.netlify.app/" class="image fit"><img src="images/AuroraLuxury.gif" alt="AuroraLuxary" /></a>
 										<header>
 											<h3>"Aurora Luxury Rentals"</h3>
 											<p>Built for a client's Airbnb and luxury home rental business in the making, this landing page will serve as a foundation for their web presence once they get up and running. Created through the use of <b>Javascript</b>, <b>HTML</b>, and <b>CSS</b>.</p>
 										</header>
 									</article>
-									<!-- <article class="item">
-										<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-										<header>
-											<h3>Natoque Vitae</h3>
-										</header>
-									</article> -->
 								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-										<header>
-											<h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio maxime inventore, voluptates cupiditate iste earum reiciendis sit, nesciunt quibusdam rem placeat suscipit. Dicta perspiciatis, nesciunt recusandae optio architecto consequatur dolores?</h3>
-										</header>
-									</article>
-									<!-- <article class="item">
-										<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-										<header>
-											<h3>Orci Convallis</h3>
-										</header>
-									</article> -->
-								</div>
+								
 							</div>
 
 						</div>
@@ -149,7 +134,7 @@
 									
 								<p>Furthermore, with my previous years of experience in the hospitality and construction industries, I highly value the relationship between the service provider and client as well. Meaning, that when you work with me, you'll get weekly updates on the development of your project, and I'll be no stranger to a collaborative environment should your project need extra manpower beyond myself.</p>
 
-								<p>When I'm not coding, I can be found drawing, playing bass guitar, dancing West Coast Swing, or actively training in circus arts!</p
+								<p>When I'm not coding, I can be found drawing, playing bass guitar, dancing West Coast Swing, or actively training in circus arts!</p>
 							</section>
 						</div>
 					</section>
@@ -165,13 +150,15 @@
 							<p>While local to the Greater Phoenix Metropolitan area, I'm available to work remote. Please fill out the form below for inquires, and I'll be more than happy to communicate with you at my earliest convinence!</p>
 
 							<form method="post" action="#" name="contact" netlify>
-								<div class="row">
-									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
-									<div class="col-12">
+								<div class=contactInfo>
+									<section class="nameEmail">
+										<div class="col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
+										<div class=" col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
+									</section>
+									<section>
 										<textarea name="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
+									</section>
+									<div class="contactButton">
 										<input type="submit" value="Send Message" />
 									</div>
 								</div>
