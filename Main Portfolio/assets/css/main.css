@@ -266,7 +266,7 @@ input, select, textarea {
 		box-sizing: border-box;
 		/* align-items: stretch; */
 		gap: 5em;
-		width: 70%;
+		max-width: 80%;
 		margin: 0 auto;
 	}
 	
@@ -531,16 +531,6 @@ input, select, textarea {
 		}
 
 /* Item */
-
-	
-	/* .portfolioItems img, .portfolioItems header {
-		max-width: 50%;
-		margin: 0 auto;
-	}
-
-		.porfolioItems header {
-			margin-bottom: 2em;
-		} */
 
 	.item {
 		box-shadow: 0 0.05em 0.15em 0 rgba(0, 0, 0, 0.05);
